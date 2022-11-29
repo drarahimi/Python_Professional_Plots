@@ -11,7 +11,7 @@ def axis_data_transform(parentfig,srcAx,xin,yin,inverse=False):
 
 
 def addzoomplot(fig, srcAx, desLoc=[], srcLoc=[], conVec=[], color='r', linewidth = 1,
-                showconnectors=True, showhighlightbox=True, showTicks = True):
+                showconnectors=True, showhighlightbox=True, showticks = True):
 
     """
     Adds a zoom axes inside the given figure and axes.
@@ -19,8 +19,8 @@ def addzoomplot(fig, srcAx, desLoc=[], srcLoc=[], conVec=[], color='r', linewidt
     Call signatures::
     
         
-        addzoomplot(fig, srcAx, xmin, xmax, ymin, ymax, bl_x, bl_y, tr_x, tr_y)   # adds a zoom axes inside fig and srcAx
-        ax = addzoomplot(fig, srcAx, xmin, xmax, ymin, ymax, bl_x, bl_y, tr_x, tr_y)   # adds a zoom axes inside fig and srcAx
+        addzoomplot(fig, srcAx)        # adds a zoom axes inside fig and srcAx interactively
+        ax = addzoomplot(fig, srcAx)   # adds a zoom axes inside fig and srcAx interactively and returns the zoom axis
         
 
     Parameters:
@@ -82,7 +82,8 @@ def addzoomplot(fig, srcAx, desLoc=[], srcLoc=[], conVec=[], color='r', linewidt
     - showconnectors (bool): The boolean to set whether to show the connector lines or not
       
     - showhighlightbox (bool): The boolean to set wether to show the highlight box or not
-                                            
+
+    - showticks (bool): The boolean to set whether to show the ticks on x and y axis of the added zoom axis                                            
     Returns:
 
         Added zoom plot axis (Axis)
@@ -251,7 +252,7 @@ def addzoomplot(fig, srcAx, desLoc=[], srcLoc=[], conVec=[], color='r', linewidt
           ', conVec=[' + ', '.join(('%d' % f) for f in conVec) + ']')
 
 
-    if (showTicks==False):
+    if (showticks==False):
         plt.tick_params(
             axis='x',          # changes apply to the x-axis
             which='both',      # both major and minor ticks are affected

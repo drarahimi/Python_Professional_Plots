@@ -118,7 +118,7 @@ elif (option == 4):
                       linewidth=1.5,
                       showconnectors=True,
                       showhighlightbox=True,
-                      showTicks=False)
+                      showticks=False)
     # you can further modify the axis of the added zoom plot (axis)
     # for example, in the line below we add customized grids to it
     ax2.grid(color="0.5", linestyle=':', linewidth=1,antialiased=True)
