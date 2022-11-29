@@ -60,7 +60,7 @@ below is a list of all arguments and options for zoomPlot function
 | srcLoc | [1x4] | Optional | [] | Location of the source box in the srcAx in data units of srcAxis |
 | desLoc | [1x4] | Optional | [] | Location of the zoomed box axis in the srcAx in data units of srcAxis |
 | conVec | [1x4] | Optional | [] | Connector vector for lines between source and destination boxes |
-| color | color value or string | | 'red' | The color for the highliught box and the connection lines |
+| color | color value or string | Optional | 'red' | The color for the highliught box and the connection lines |
 | linewidth | decimal | Optional | 1 | The linewidth (thickness) for the highlight box and connectors |
 | showconnectors | bool | Optional | True | The boolean to set whether to show the connector lines or not |
 | showhighlightbox | bool | Optional | True | The boolean to set wether to show the highlight box or not |
